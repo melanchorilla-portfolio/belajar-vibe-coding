@@ -1,0 +1,40 @@
+buatkan issue.md yang berisi perencanaan untuk nanti di implementasikan oleh junior programmer
+
+Isi dari planning-nya adalah sebagai berikut:
+Buat tabel sessions:
+id integer auto increment primary key
+token varchar(255) not null (isinya UUID untuk token user yang login)
+user_id integer not null (foreign key ke tabel users)
+created_at timestamp default current_timestamp
+updated_at
+
+buatkan API untuk login user
+
+endpoint: POST /api/users/login
+
+Request body:
+{
+    "email": "[EMAIL_ADDRESS]",
+    "password": "password"
+}
+
+Response body (success):
+{
+    "data": "token"
+}
+
+Response body (error): 
+{
+    "error": "Email atau password salah"
+}
+
+Struktur folder di dalam src
+- routes: ini berisi routing elysia js
+- services: ini berisi logic bisnis aplikasi
+
+
+Struktur file
+- routes: menggunakan format misal users-route.ts
+- services: menggunakan format misal users-service.ts
+
+Jelaskan tahapan-tahapan yang harus dilakukan untuk mengimplementasikan fitur ini, anggap saja yang akan mengimplementasikan adalah junior programmer.
